@@ -1,0 +1,140 @@
+middleware 
+capa de software que ejecuta sobree el sistema operativo local ofreciendo unos servicios distribuidos estandarizados
+Sistema abierto independiente del fabricante
+no depende de hardware y sistema operativo subyacente 
+SD:RETOS
+1.-heterogeneidad
+	infraestructura de red subyacente
+	computadoras hardware y software
+	lemguajes de programacion 
+	algunas metodologias
+2.-apertura
+	Asegura la extensibilidad y mantenibilidad del sistema
+3.-Seguridad
+	privacidad
+	autentificacion	
+	Disponibilidad
+	
+4.-Manejo de fallas
+	deteccion de errores
+	enmascarar
+	tolerancia
+	Redundancia
+5.-Concurrencia
+	Planificacion consistente de hijos concurrentes
+	Se evitan problemas de deadlocks y livelocks
+6.-Transparenica:ocultamiento de la heterogeneidad y distribucion natural de los sistemas, lo cual aparece ante el usuario como un solo sistema
+	Clasificacion de la transparencia
+		Acceso
+		Localizacion
+		Concurrencia
+		Replicacion
+		fallas
+		Movilidad 
+		Desempeño
+
+	Ejemplos:
+1.-La internet 
+		°Redes heterogeneas de computadoras y aplicaciones
+		°Impllementacion mediante la pila de protocolo de internet
+		°Configuracion tipica
+2.-Sistemas 	Multimedias Distribuidos
+	°Frecuentemente utilizan la infraestructura de INternet
+	°Caracteeristicas
+		¬Fuentes de datos y recipientes heterogeneos que necesitan ser autorizados en tiempo real
+			*Video
+			*Audio
+			*Texto
+		¬Frecuentemente: Servicios Distribuidos
+			*Multidifusion
+		¬Ejemplos
+			*Herramientas de tele-educacion
+			*Video conferencias
+			*video y audio en demanda
+3.-INtranets
+	*Redes Localmente administradas
+	*Generalmente propietaras
+	*Interface con la internet
+		*Cortafuegos
+	*Proporciona Servicios interna y externamente
+4.-Sistemas de computo MOvil
+	*Sistemas de telefonia celular
+		*Recursos que se compartan
+			*Radio Frecuencia
+			*Tiempos de transmision
+			*El movil en movimiento
+	*Computadoras portatiles
+		*LANs inalambricos
+		*Dispositivos electronicos
+		*Dispositivos Portatiles
+5.-Sistemas Embebidos
+	°Una cadena enlazada a la red
+	°Sistemas de control de aviacion
+		*Sistemas de control de vuelo en aeropuertos
+	°Sistemas de control de automoviles
+		*Automoviles 
+		*Conectados mediante canales LAN propietarios
+	°Electrodomesticos
+	°Equipos de audio HiFi
+6.-
+8.-Sistemas de Archivos en Red
+	°Arquitectura para acceder a sistemas de archivos a traves de la red
+9.-EL World Wide Web
+	°Arquitectura cliente/servidor abierta implementada sobre  la internet
+	°Comparticion de recursos
+10.-Cluster
+	°Tipo de sistema distribuyido muy popular
+	°Dedicado a una tarea especifica
+		*Computacion paralela
+		*Sewrvicios escalables  y de alta disponoibilidad
+	°Ejemplo:Google usa un cluster con 6000 procesadores
+	°Sistema homogeneo basado en componentes estandar
+	°Gestion de procesos mas coordinada que en SD
+11.-Sistemas P2P
+	*Ssitemas cuyo rol es similar
+	*Gnutella,Napster,Skype
+12.-Cloud Computing
+		°Basado en Virtualizacion y SOA 
+		°Se paga por lolo que se consume
+		°Publicos,Privados,Hibridos
+		°laaS,PaaS,SaaS
+
+Middleware:Definicion
+Software de conectivvidad que consiste en un conjunto de servicios que permiten interactuar a multiple procesos que se ejecutan en distintas maquinas atraves de una red.Ocultan la heterogeneidad av¿bstrae la complejidad sun¿byacente y proveen de un modelo de programacion conveniente para los desarrolladores de aplicaciones.
+Es un software qu epuede iincrementar significativamente la reiusabilidad mediante .
+
+Caracteristicas
+Resumen de caracterisrticas
+*independiza el servicio de su implatantacion, del sistema operativo y de los protocolos de comunicaciones
+*Permite la convivencia de distintos servicios en un mismo sistema
+*Pwermite la transparencia
+
+Ejemplos
+ODBC/JDBC, para bases de datos,Lotus para groupware, HTTP y SSL para web,CORBA,DCOM y JAVA RMI para objetos distribuidos.
+No todos los middleware son iguales: CORBA Y Sockets TCP/IP.
+Sockets 
+*Constituye la interfaz de origramacion de la capa de transporte
+*Es un mecanismo de comunicacion bidirecccional
+
+Remote Procedure Call(RPC)
+Cliente:
+int main(){
+}
+Remote Method Invocatio(RMI)
+*Permite la invocacion remota de metodos en objetos que residen en diferentes mv
+*Permite la invocacion de metodos remotos por Applets
+*Integra el MOdelo de Objetos Distribuidos al lenguaje Java de modo natural, preservando en lo posible la semantica de objetos en Java
+Permite la distincion entre objetos locales y remotos
+*Permite diferentes semanticcas en las referreencias a objetos remotos
+*Facilita el desarrollo de aplicaciones distribuidas
+Objetos Locales					Objetos Remotos 														Objetos Locales
+											Interface Objetos Remotos
+Cliente-------------->Implementacion Objeto Remoto<-----------------Servidor
+											Conexiones en los objetos remotos(Stubs)		
+Conexion a traves de la URL																	Registro de las URL para levantar los servicios
+determinada por el servidor																	de conexion con los objetos remotos y sea					
+Instancia objetos definido,																	posible la localizacion por el cliente
+en los objetos Remotos y																		(debe estar en linea de ejecucion)
+permite invocarlos para que 
+realice su trabajo en la 
+maquina servidor
