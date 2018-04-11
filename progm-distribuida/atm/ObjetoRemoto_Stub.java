@@ -11,7 +11,8 @@ public final class ObjetoRemoto_Stub
     private static java.lang.reflect.Method $method_DepositaSaldo_1;
     private static java.lang.reflect.Method $method_ExisteCliente_2;
     private static java.lang.reflect.Method $method_ExisteNIP_3;
-    private static java.lang.reflect.Method $method_RetiraSaldo_4;
+    private static java.lang.reflect.Method $method_Registrar_4;
+    private static java.lang.reflect.Method $method_RetiraSaldo_5;
     
     static {
 	try {
@@ -19,7 +20,8 @@ public final class ObjetoRemoto_Stub
 	    $method_DepositaSaldo_1 = IObjetoRemoto.class.getMethod("DepositaSaldo", new java.lang.Class[] {int.class, double.class});
 	    $method_ExisteCliente_2 = IObjetoRemoto.class.getMethod("ExisteCliente", new java.lang.Class[] {int.class});
 	    $method_ExisteNIP_3 = IObjetoRemoto.class.getMethod("ExisteNIP", new java.lang.Class[] {int.class, int.class});
-	    $method_RetiraSaldo_4 = IObjetoRemoto.class.getMethod("RetiraSaldo", new java.lang.Class[] {int.class, double.class});
+	    $method_Registrar_4 = IObjetoRemoto.class.getMethod("Registrar", new java.lang.Class[] {int.class, int.class, double.class});
+	    $method_RetiraSaldo_5 = IObjetoRemoto.class.getMethod("RetiraSaldo", new java.lang.Class[] {int.class, double.class});
 	} catch (java.lang.NoSuchMethodException e) {
 	    throw new java.lang.NoSuchMethodError(
 		"stub class initialization failed");
@@ -96,12 +98,28 @@ public final class ObjetoRemoto_Stub
 	}
     }
     
+    // implementation of Registrar(int, int, double)
+    public boolean Registrar(int $param_int_1, int $param_int_2, double $param_double_3)
+	throws java.rmi.RemoteException
+    {
+	try {
+	    Object $result = ref.invoke(this, $method_Registrar_4, new java.lang.Object[] {new java.lang.Integer($param_int_1), new java.lang.Integer($param_int_2), new java.lang.Double($param_double_3)}, -2908891983307201102L);
+	    return ((java.lang.Boolean) $result).booleanValue();
+	} catch (java.lang.RuntimeException e) {
+	    throw e;
+	} catch (java.rmi.RemoteException e) {
+	    throw e;
+	} catch (java.lang.Exception e) {
+	    throw new java.rmi.UnexpectedException("undeclared checked exception", e);
+	}
+    }
+    
     // implementation of RetiraSaldo(int, double)
     public void RetiraSaldo(int $param_int_1, double $param_double_2)
 	throws java.rmi.RemoteException
     {
 	try {
-	    ref.invoke(this, $method_RetiraSaldo_4, new java.lang.Object[] {new java.lang.Integer($param_int_1), new java.lang.Double($param_double_2)}, -4985801328220595114L);
+	    ref.invoke(this, $method_RetiraSaldo_5, new java.lang.Object[] {new java.lang.Integer($param_int_1), new java.lang.Double($param_double_2)}, -4985801328220595114L);
 	} catch (java.lang.RuntimeException e) {
 	    throw e;
 	} catch (java.rmi.RemoteException e) {

@@ -11,4 +11,5 @@ public interface IObjetoRemoto extends Remote{
 				public double ConsultaSaldo(int no_cuenta) throws RemoteException;	
 				public void RetiraSaldo(int no_cuenta,double cantidad) throws RemoteException;
 				public void DepositaSaldo(int no_cuenta,double cantidad) throws RemoteException;
+				public boolean Registrar(int no_cuenta,int nip,double saldo) throws RemoteException;
 }
